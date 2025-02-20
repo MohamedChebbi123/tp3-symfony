@@ -1,31 +1,36 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    <h1>Inscription</h1>
-    <div>
-        <label> donner votre nom
-            <input type="email"></input>
-        </label>
-    </div>
-    <div>
-        <label>donner votre prénom
-            <input type="email"></input>
-        </label>
-    </div>
+{% include "navbar.html.twig" %}
+
+<div class="container mt-5">
+    <h1 class="mb-4 text-center">Inscription</h1>
+    <form>
+        <div class="mb-3">
+            <label for="nom" class="form-label">Donner votre nom</label>
+            <input type="text" class="form-control" id="nom" placeholder="Entrez votre nom">
+        </div>
+
+        <div class="mb-3">
+            <label for="prenom" class="form-label">Donner votre prénom</label>
+            <input type="text" class="form-control" id="prenom" placeholder="Entrez votre prénom">
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Donner votre email</label>
+            <input type="email" class="form-control" id="email" placeholder="Entrez votre email">
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Donner votre mot de passe</label>
+            <input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe">
+        </div>
 
         <div>
-            <label> donner votre email
-                <input type="email"></input>
-            </label>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </div>
-        <div>
-            <label> donner votre mot de passe
-                <input type="password"></input>
-            </label>
-        </div>
-        <div>
-            <button type="submit">Submit</button>
-        </div>
-    
-    {% include "footer.html.twig" %}
+    </form>
+</div>
+
+{% include "footer.html.twig" %}
 {% endblock %}
