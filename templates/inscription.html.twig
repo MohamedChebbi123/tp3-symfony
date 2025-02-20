@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1>Inscription</h1>
+    <div>
+        <label> donner votre nom
+            <input type="email"></input>
+        </label>
+    </div>
+    <div>
+        <label>donner votre prénom
+            <input type="email"></input>
+        </label>
+    </div>
+
+        <div>
+            <label> donner votre email
+                <input type="email"></input>
+            </label>
+        </div>
+        <div>
+            <label> donner votre mot de passe
+                <input type="password"></input>
+            </label>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    
+    {% include "footer.html.twig" %}
+{% endblock %}
